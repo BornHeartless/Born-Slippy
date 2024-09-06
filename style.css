@@ -1,0 +1,79 @@
+body{
+    background-image: url(https://images.noob-club.ru/news/2019/11/i88tla57gr.jpg);
+    background-size: 100%;/*размер фона*/
+}
+#game{
+    background-color: rgb(255, 255, 255);/*цвет фона*/
+    max-width: 600px;/*максимальная ширина*/
+    max-height: 400px;/*Максимальная высота*/
+    padding: 10px;/*Отступ внутри коробки*/
+    margin: 40px auto;/*Отступ снаружи коробки*/
+    border: 5px dashed brown;/*Задание рамки*/
+}
+#controls,#stats{
+    border: 2px solid rgb(184, 14, 14);
+    padding: 10px;
+    background-color: rgb(62, 106, 181);
+    background-color: #90abcd;
+    margin: 10px 0px;
+    color: beige;/*Цвет текста*/
+    font-size: 20px;/*Размер шрифта*/
+}
+span{
+    margin: 0px 15px;
+}
+.stat{
+    font-size: 40px;
+}
+.gold{
+    background-image: url(img/Золото.webp);
+    background-size: 100%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.hp{
+    background-image: url(img/Здоровье.webp);
+    background-size: 100%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.exp{
+    background-image: url(img/Опыт.webp);
+    background-size: 100%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+}
+#button1{
+    background-image: url(img/маазин.webp);
+    background-size: 100%;
+    width: 64px;
+    height: 64px;
+}
+#button2{
+    background-image: url(img/атака.jpg);
+    background-size: 100%;
+    width: 64px;
+    height: 64px;
+}
+#button3{
+    background-image: url("img/лавный босс.png");
+    width: 64px;
+    height: 64px;
+}
+#monsterStats{
+    display: none;
+}
+#shopgan{
+    background-color: rgb(255, 255, 255);/*цвет фона*/
+    width: 400px;/*максимальная ширина*/
+    height: 200px;/*Максимальная высота*/
+    padding: 10px;
+    margin: 40px auto;
+    border: 5px dashed brown;
+    /* display: none; */
+    font-size: 30px;
+}
