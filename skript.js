@@ -47,5 +47,5 @@ function goBack () {//function-команда создания функции
 }
 const shopGan = docment.querySelector("#shopgan")
 function goGan () {
-    shopGan.onclick = 
+    // shopGan.onclick = 
 }
