@@ -11,7 +11,7 @@ function goShop() {//function-команда создания функции
     button1.style.backgroundImage = "url('img/покупка зелья здоровья.webp')"
     button1.onclick = buyHp
     button2.style.backgroundImage = "url('img/покупка оружия.webp')"
-    // button2.onclick = buyHp
+    button2.onclick = goGan
     button3.style.backgroundImage = "url(img/назад.webp)"
     // button3.onclick = buyHp
 }
@@ -45,7 +45,10 @@ function goBack () {//function-команда создания функции
     button3.style.backgroundImage = "url('img/лавный босс.png')"
     // button3.onclick = buyHp
 }
-const shopGan = docment.querySelector("#shopgan")
+const shopGan = document.querySelector("#shopgan")
 function goGan () {
-    // shopGan.onclick = 
+    // button2.onclick = goGan
+    shopGan.style.display = "block"
+
+
 }
