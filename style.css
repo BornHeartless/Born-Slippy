@@ -54,13 +54,13 @@ span{
     height: 64px;
 }
 #button2{
-    background-image: url(img/атака.jpg);
+    background-image: url(img/атака.webp);
     background-size: 100%;
     width: 64px;
     height: 64px;
 }
 #button3{
-    background-image: url("img/лавный босс.png");
+    background-image: url("img/лавный босс.webp");
     width: 64px;
     height: 64px;
 }
@@ -76,4 +76,31 @@ span{
     border: 5px dashed brown;
     display: none;
     font-size: 30px;
+}
+#enemies{
+    background-color: rgb(255, 255, 255);/*цвет фона*/
+    width: 400px;/*максимальная ширина*/
+    height: 240px;/*Максимальная высота*/
+    padding: 10px;
+    margin: 40px auto;
+    border: 5px dashed brown;
+    display: none;
+    font-size: 30px;
+}
+#enemies button{
+    background-image: url(img/Temp.jpg);
+    width: 64px;
+    height: 64px;
+}
+#enemies-box div{
+    /* width: 90px; */
+    display: flex;
+    font-size: 16px;
+    flex-direction: column;
+    align-items: center;
+}
+#enemies-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
 }
