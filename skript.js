@@ -41,7 +41,7 @@ function goBack () {//function-команда создания функции
     button1.style.backgroundImage = "url(img/маазин.webp)"
     button1.onclick = goShop
     button2.style.backgroundImage = "url(img/атака.webp)"
-    // button2.onclick = buyHp
+    button2.onclick = goFight
     button3.style.backgroundImage = "url('img/лавный босс.webp')"
     // button3.onclick = buyHp
     shopGan.style.display = "none"
@@ -62,7 +62,11 @@ const enemy_button8 = document.querySelector("#enemy-button8")
 const enemy_button9 = document.querySelector("#enemy-button9")
 const enemy_button10 = document.querySelector("#enemy-button10")
 function goFight () {
+    if (enemies.style.display === "none") {
     enemies.style.display = "block"
+    } else {
+    enemies.style.display = "none"
+    }
     enemy_button1.style.backgroundImage = "url(img/Rajing.webp)"
     enemy_button2.style.backgroundImage = "url(img/Stobb.webp)"
     enemy_button3.style.backgroundImage = "url(img/Hermit.webp)"
@@ -74,4 +78,7 @@ function goFight () {
     enemy_button9.style.backgroundImage = "url(img/Hozuki.webp)"
     enemy_button10.style.backgroundImage = "url(img/Mad.webp)"
 
+}
+function closeFight () {
+    enemies.style.display = "none"
 }
