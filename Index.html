@@ -14,9 +14,11 @@
         <div id="stats">
             <span class="stat"><span class="exp"></span>0</span>
             <span class="stat"><span class="hp"></span><span class="hp-text"></span></span>
-            <span class="stat"><span class="gold"></span><class class="gold-text"></class></span>
+            <span class="stat"><span class="gold"></span>
+                <class class="gold-text"></class>
+            </span>
         </div>
-         <div id="controls"> 
+        <div id="controls">
             <button id="button1"></button>
             <button id="button2"></button>
             <button id="button3"></button>
@@ -26,7 +28,8 @@
             <span>Здоровье</span>
         </div>
         <div id="text">
-            Добро пожаловать, храбрец, ты попал в дворец короля Ивана Ивановича. Тебя ждет серьезное задание, тебе нужно победить главного босса.
+            Добро пожаловать, храбрец, ты попал в дворец короля Ивана Ивановича. Тебя ждет серьезное задание, тебе нужно
+            победить главного босса.
         </div>
     </div>
     <div id="shopgan">
@@ -34,57 +37,105 @@
         <div id="gun-box">
             <div>
                 <button id="gun-button1"></button>
-            </div>    
+            </div>
+            <div>
                 <button id="gun-button2"></button>
+            </div>
+            <div>
                 <button id="gun-button3"></button>
+            </div>
+            <div>
                 <button id="gun-button4"></button>
+            </div>
+            <div>
                 <button id="gun-button5"></button>
+            </div>
+            <div>
                 <button id="gun-button6"></button>
+            </div>
         </div>
     </div>
     <div id="enemies">
         Враги
         <div id="enemies-box">
             <div>
-                <button id="enemy-button1"></button>
+                <button id="enemy-button1" class="Rajing-Rooper"></button>
                 Rajing <br> Rooper
             </div>
             <div>
-                <button id="enemy-button2"></button>
+                <button id="enemy-button2" class="Stobb-Winston"></button>
                 Stobb <br> Winston
             </div>
             <div>
-                <button id="enemy-button3"></button>
-                Hermit 
+                <button id="enemy-button3" class="Hermit1"></button>
+                Hermit
             </div>
             <div>
-                <button id="enemy-button4"></button>
+                <button id="enemy-button4" class="Loomys-Devil"></button>
                 Loomys <br> Devil
             </div>
             <div>
-                <button id="enemy-button5"></button>
+                <button id="enemy-button5" class="jeivzz-Rockfeller"></button>
                 Jeivzz <br> Rockfeller
             </div>
             <div>
-                <button id="enemy-button6"></button>
+                <button id="enemy-button6" class="Morro-Lanister"></button>
                 Morro <br> Lanister
             </div>
             <div>
-                <button id="enemy-button7"></button>
+                <button id="enemy-button7" class="Rango-Fearless"></button>
                 Rango <br> Fearless
             </div>
             <div>
-                <button id="enemy-button8"></button>
+                <button id="enemy-button8" class="Qweezly Robinson"></button>
                 Qweezly <br> Robinson
             </div>
             <div>
-                <button id="enemy-button9"></button>
+                <button id="enemy-button9" class="Hozuki Heartless"></button>
                 Hozuki <br> Heartless
             </div>
             <div>
-                <button id="enemy-button10"></button>
+                <button id="enemy-button10" class="Mad-Morton"></button>
                 Mad <br> Morton
             </div>
+        </div>
+    </div>
+    <div id="start-fight">
+        <div id="me-and-enemy">
+            <button id="me"></button>
+            <p>VS</p>
+            <button id="enemy"></button>
+        </div>
+        <div id="play-and-back">
+            <button id="play"></button>
+            <button id="back"></button>
+        </div>
+    </div>
+    <div id="start-game">
+        <div id="my-name">
+            <h2 id="title">Выбери персонажа</h2>
+            <input type="text">
+        </div>
+        <div id="my-hero">
+            <div id="archer" class="my-hero-card">
+                <span>Лучник</span>
+                <img src="img/Archer.jpg" alt="" id="img-archer">
+            </div>
+            <div id="warrior" class="my-hero-card">
+                <span>Воин</span>
+                <img src="img/Мечник.jpg" alt="" id="img-warrior">
+            </div>
+            <div id="mage" class="my-hero-card">
+                <span>Маг</span>
+                <img src="img/маг.png" alt="" id="img-mage">
+            </div>
+            <div id="engineer" class="my-hero-card">
+                <span>Инженер</span>
+                <img src="img/инженер.png" alt="" id="img-engineer">
+            </div>
+        </div>
+        <div id="save-my-stats">
+            <button id="save"></button>
         </div>
     </div>
     <script src="skript.js"></script>

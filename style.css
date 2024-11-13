@@ -1,45 +1,65 @@
-body{
+*{
+    
+}
+body {
     background-image: url(https://images.noob-club.ru/news/2019/11/i88tla57gr.jpg);
-    background-size: 100%;/*размер фона*/
+    background-size: 100%;
+    /*размер фона*/
 }
-#game{
-    background-color: rgb(255, 255, 255);/*цвет фона*/
-    max-width: 600px;/*максимальная ширина*/
-    max-height: 400px;/*Максимальная высота*/
-    padding: 10px;/*Отступ внутри коробки*/
-    margin: 40px auto;/*Отступ снаружи коробки*/
-    border: 5px dashed brown;/*Задание рамки*/
+
+#game {
+    background-color: rgb(255, 255, 255);
+    /*цвет фона*/
+    max-width: 600px;
+    /*максимальная ширина*/
+    max-height: 400px;
+    /*Максимальная высота*/
+    padding: 10px;
+    /*Отступ внутри коробки*/
+    margin: 40px auto;
+    /*Отступ снаружи коробки*/
+    border: 5px dashed brown;
+    /*Задание рамки*/
 }
-#controls,#stats{
+
+#controls,
+#stats {
     border: 2px solid rgb(184, 14, 14);
     padding: 10px;
     background-color: rgb(62, 106, 181);
     background-color: #90abcd;
     margin: 10px 0px;
-    color: beige;/*Цвет текста*/
-    font-size: 20px;/*Размер шрифта*/
+    color: beige;
+    /*Цвет текста*/
+    font-size: 20px;
+    /*Размер шрифта*/
 }
-span{
+
+span {
     margin: 0px 15px;
 }
-.stat{
+
+.stat {
     font-size: 40px;
 }
-.gold{
+
+.gold {
     background-image: url(img/Золото.webp);
     background-size: 100%;
     display: inline-block;
     width: 40px;
     height: 40px;
 }
-.hp{
+
+.hp {
     background-image: url(img/Здоровье.webp);
     background-size: 100%;
     display: inline-block;
     width: 40px;
     height: 40px;
 }
-.exp{
+
+.exp {
     background-image: url(img/Опыт.webp);
     background-size: 100%;
     display: inline-block;
@@ -47,60 +67,212 @@ span{
     height: 40px;
 
 }
-#button1{
+
+#button1 {
     background-image: url(img/маазин.webp);
     background-size: 100%;
     width: 64px;
     height: 64px;
 }
-#button2{
+
+#button2 {
     background-image: url(img/атака.webp);
     background-size: 100%;
     width: 64px;
     height: 64px;
 }
-#button3{
+
+#button3 {
     background-image: url("img/лавный босс.webp");
     width: 64px;
     height: 64px;
 }
-#monsterStats{
+
+#monsterStats {
     display: none;
 }
-#shopgan{
-    background-color: rgb(255, 255, 255);/*цвет фона*/
-    width: 400px;/*максимальная ширина*/
-    height: 200px;/*Максимальная высота*/
+
+#shopgan {
+    background-color: rgb(255, 255, 255);
+    /*цвет фона*/
+    width: 250px;
+    /*максимальная ширина*/
+    height: 200px;
+    /*Максимальная высота*/
     padding: 10px;
     margin: 40px auto;
     border: 5px dashed brown;
     display: none;
     font-size: 30px;
 }
-#enemies{
-    background-color: rgb(255, 255, 255);/*цвет фона*/
-    width: 400px;/*максимальная ширина*/
-    height: 240px;/*Максимальная высота*/
+
+#enemies {
+    background-color: rgb(255, 255, 255);
+    /*цвет фона*/
+    width: 400px;
+    /*максимальная ширина*/
+    height: 240px;
+    /*Максимальная высота*/
     padding: 10px;
     margin: 40px auto;
     border: 5px dashed brown;
     display: none;
     font-size: 30px;
 }
-#enemies button{
-    background-image: url(img/Temp.jpg);
+
+#enemies button {
     width: 64px;
     height: 64px;
 }
-#enemies-box div{
-    /* width: 90px; */
+
+#enemies-box div {
     display: flex;
     font-size: 16px;
     flex-direction: column;
     align-items: center;
 }
-#enemies-box{
+
+#enemies-box {
     display: flex;
     flex-wrap: wrap;
     gap: 13px;
+}
+
+#gun-box div {
+    display: flex;
+    font-size: 16px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gun-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+#shopgan button {
+    width: 64px;
+    height: 64px;
+}
+
+#start-fight {
+    background-color: rgb(255, 255, 255);
+    /*цвет фона*/
+    /* width: 90vw;максимальная ширина */
+    height: 90vh;
+    /*Максимальная высота*/
+    padding: 10px;
+    margin: 40px auto;
+    border: 5px dashed brown;
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transform: translate(-50%, -50%);
+}
+
+#me-and-enemy button {
+    width: 50vh;
+    height: 80vh;
+    background-size: 100%;
+}
+
+#play,
+#back {
+    width: 70px;
+    height: 30px;
+    background-size: 100%;
+}
+
+#me-and-enemy {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 100px;
+}
+
+#play-and-back {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#start-game {
+    background-color: rgb(113, 76, 171);
+    width: 600px;
+    /* height: 350px; */
+    padding: 10px;
+    margin: 40px auto;
+    border: 5px dashed brown;
+    display: block;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transform: translate(-50%, -50%);
+}
+#my-name {
+    /* background-color: aquamarine; */
+    display: block;
+    justify-content: flex-start;
+    width: 400px;
+    /* height: 60px; */
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 30px;
+    text-align: center;
+}
+#my-hero {
+    width: 600px;
+    /* height: 130px; */
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+#save-my-stats {
+    width: 600px;
+    height: 30px;
+    padding: 10px;
+    margin-top: 40px auto;
+    display: flex;
+    font-size: 30px;
+    justify-content: end;
+}
+.my-hero-card {
+    background-size: 100%;
+    width: 145px;
+    /* height: 160px; */
+    /* margin: 40px auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my-hero-card img:hover{
+    outline: 5px solid red;
+    outline-offset: -5px;
+}
+#my-hero img {
+    width: 100px;
+    height: 176px;
+    transition: 0.5s;
+}
+#title {
+    margin: 0px;
+}
+#save {
+    width: 70px;
+    height: 30px;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-bottom: 0px;
 }
