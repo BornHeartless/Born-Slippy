@@ -304,7 +304,8 @@ function closeGun() {
     button2.onclick = createShopgan
 }
 localStorage.clear()
-function buyGun() {
+function buyGun(e) {
     let gunImg = e.target.getAttribute("id")
-    
+    localStorage.setItem("gold")
+    console.log(gunImg)
 }
