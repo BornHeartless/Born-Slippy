@@ -1,6 +1,11 @@
-*{
-    
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+    font-family: "Special Elite", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
 body {
     background-image: url(https://images.noob-club.ru/news/2019/11/i88tla57gr.jpg);
     background-size: 100%;
@@ -23,7 +28,8 @@ body {
 }
 
 #controls,
-#stats {
+#stats,
+#my-hero-stats {
     border: 2px solid rgb(184, 14, 14);
     padding: 10px;
     background-color: rgb(62, 106, 181);
@@ -68,6 +74,8 @@ span {
 
 }
 
+.my-hero-name {}
+
 #button1 {
     background-image: url(img/маазин.webp);
     background-size: 100%;
@@ -83,21 +91,74 @@ span {
 }
 
 #button3 {
-    background-image: url("img/лавный босс.webp");
+    background-image: url("img/Book.jpg");
+    background-size: 100%;
     width: 64px;
     height: 64px;
 }
 
-#monsterStats {
+#enemiesBook {
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 600px;
+    padding: 10px;
+    margin: 40px auto;
+    border: 5px dashed brown;
     display: none;
+    font-size: 30px;
+    position: absolute;
+    overflow-y: scroll;
+    top: 0%;
+    left: 17%;
 }
+
+.enemies-card {
+    background-size: 100%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.enemies-card-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.enemies-card-description h2 {
+    margin: 5px;
+}
+
+#enemies-img-and-text img {
+    width: 180px;
+    height: 320px;
+}
+
+.enemy-description {
+    font-family: "Special Elite", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#enemiesBook img {
+    width: 180px;
+    height: 320px;
+}
+
+#menu {
+    width: 70px;
+    height: 30px;
+    background-size: 100%;
+}
+
+/* #monsterStats { */
+/* display: none; */
+/* } */
 
 #shopgan {
     background-color: rgb(255, 255, 255);
     /*цвет фона*/
-    width: 250px;
+    width: 420px;
     /*максимальная ширина*/
-    height: 200px;
+    height: 250px;
     /*Максимальная высота*/
     padding: 10px;
     margin: 40px auto;
@@ -109,7 +170,7 @@ span {
 #enemies {
     background-color: rgb(255, 255, 255);
     /*цвет фона*/
-    width: 400px;
+    width: 550px;
     /*максимальная ширина*/
     height: 240px;
     /*Максимальная высота*/
@@ -121,6 +182,7 @@ span {
 }
 
 #enemies button {
+    background-size: 100%;
     width: 64px;
     height: 64px;
 }
@@ -130,12 +192,14 @@ span {
     font-size: 16px;
     flex-direction: column;
     align-items: center;
+    width: 90px;
 }
 
 #enemies-box {
     display: flex;
     flex-wrap: wrap;
     gap: 13px;
+    justify-content: space-evenly;
 }
 
 #gun-box div {
@@ -148,7 +212,7 @@ span {
 #gun-box {
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
+    justify-content: space-evenly;
 }
 
 #shopgan button {
@@ -158,10 +222,7 @@ span {
 
 #start-fight {
     background-color: rgb(255, 255, 255);
-    /*цвет фона*/
-    /* width: 90vw;максимальная ширина */
     height: 90vh;
-    /*Максимальная высота*/
     padding: 10px;
     margin: 40px auto;
     border: 5px dashed brown;
@@ -205,7 +266,6 @@ span {
 #start-game {
     background-color: rgb(113, 76, 171);
     width: 600px;
-    /* height: 350px; */
     padding: 10px;
     margin: 40px auto;
     border: 5px dashed brown;
@@ -219,26 +279,26 @@ span {
     gap: 10px;
     transform: translate(-50%, -50%);
 }
+
 #my-name {
-    /* background-color: aquamarine; */
     display: block;
     justify-content: flex-start;
     width: 400px;
-    /* height: 60px; */
     padding: 10px;
     margin: 10px auto;
     font-size: 30px;
     text-align: center;
 }
+
 #my-hero {
     width: 600px;
-    /* height: 130px; */
     padding: 10px;
     margin: 10px auto;
     display: flex;
     align-items: center;
     font-size: 30px;
 }
+
 #save-my-stats {
     width: 600px;
     height: 30px;
@@ -248,6 +308,7 @@ span {
     font-size: 30px;
     justify-content: end;
 }
+
 .my-hero-card {
     background-size: 100%;
     width: 145px;
@@ -257,19 +318,24 @@ span {
     flex-direction: column;
     align-items: center;
 }
-.my-hero-card img:hover{
+
+.my-hero-card img:hover {
     outline: 5px solid red;
     outline-offset: -5px;
 }
+
 #my-hero img {
     width: 100px;
     height: 176px;
     transition: 0.5s;
 }
+
 #title {
     margin: 0px;
 }
+
 #save {
+    background-image: url(img/Ready.png);
     width: 70px;
     height: 30px;
     background-size: 100%;

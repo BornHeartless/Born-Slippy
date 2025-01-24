@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG</title>
     <link rel="stylesheet" href="style.css">
+    <script src="enemies-db.js"></script>
+    <script src="gun-db.js"></script>
 </head>
 
 <body>
     <div id="game">
-
+        <div id="my-hero-stats">
+            <span class="my-hero-name"></span>
+            <span class="my-hero-class"></span>
+        </div>
         <div id="stats">
             <span class="stat"><span class="exp"></span>0</span>
             <span class="stat"><span class="hp"></span><span class="hp-text"></span></span>
@@ -23,81 +28,45 @@
             <button id="button2"></button>
             <button id="button3"></button>
         </div>
-        <div id="monsterStats">
+        <!-- <div id="monsterStats">
             <span>Название</span>
             <span>Здоровье</span>
-        </div>
+        </div> -->
         <div id="text">
-            Добро пожаловать, храбрец, ты попал в дворец короля Ивана Ивановича. Тебя ждет серьезное задание, тебе нужно
-            победить главного босса.
         </div>
     </div>
     <div id="shopgan">
-        Магазин оружия
+        Shopgun
         <div id="gun-box">
             <div>
                 <button id="gun-button1"></button>
+                <span id="gun-name1"></span>
             </div>
             <div>
                 <button id="gun-button2"></button>
+                <span id="gun-name2"></span>
             </div>
             <div>
                 <button id="gun-button3"></button>
+                <span id="gun-name3"></span>
             </div>
             <div>
                 <button id="gun-button4"></button>
+                <span id="gun-name4"></span>
             </div>
             <div>
                 <button id="gun-button5"></button>
+                <span id="gun-name5"></span>
             </div>
             <div>
                 <button id="gun-button6"></button>
+                <span id="gun-name6"></span>
             </div>
         </div>
     </div>
     <div id="enemies">
-        Враги
+        Enemies
         <div id="enemies-box">
-            <div>
-                <button id="enemy-button1" class="Rajing-Rooper"></button>
-                Rajing <br> Rooper
-            </div>
-            <div>
-                <button id="enemy-button2" class="Stobb-Winston"></button>
-                Stobb <br> Winston
-            </div>
-            <div>
-                <button id="enemy-button3" class="Hermit1"></button>
-                Hermit
-            </div>
-            <div>
-                <button id="enemy-button4" class="Loomys-Devil"></button>
-                Loomys <br> Devil
-            </div>
-            <div>
-                <button id="enemy-button5" class="jeivzz-Rockfeller"></button>
-                Jeivzz <br> Rockfeller
-            </div>
-            <div>
-                <button id="enemy-button6" class="Morro-Lanister"></button>
-                Morro <br> Lanister
-            </div>
-            <div>
-                <button id="enemy-button7" class="Rango-Fearless"></button>
-                Rango <br> Fearless
-            </div>
-            <div>
-                <button id="enemy-button8" class="Qweezly Robinson"></button>
-                Qweezly <br> Robinson
-            </div>
-            <div>
-                <button id="enemy-button9" class="Hozuki Heartless"></button>
-                Hozuki <br> Heartless
-            </div>
-            <div>
-                <button id="enemy-button10" class="Mad-Morton"></button>
-                Mad <br> Morton
-            </div>
         </div>
     </div>
     <div id="start-fight">
@@ -113,29 +82,35 @@
     </div>
     <div id="start-game">
         <div id="my-name">
-            <h2 id="title">Выбери персонажа</h2>
-            <input type="text">
+            <h2 id="title">Choose your hero</h2>
+            <input type="text" id="hero-name-imput">
         </div>
         <div id="my-hero">
             <div id="archer" class="my-hero-card">
-                <span>Лучник</span>
-                <img src="img/Archer.jpg" alt="" id="img-archer">
+                <span>Archer</span>
+                <img src="img/img-archer.jpg" alt="" id="img-archer">
             </div>
             <div id="warrior" class="my-hero-card">
-                <span>Воин</span>
-                <img src="img/Мечник.jpg" alt="" id="img-warrior">
+                <span>Warrior</span>
+                <img src="img/img-warrior.jpg" alt="" id="img-warrior">
             </div>
             <div id="mage" class="my-hero-card">
-                <span>Маг</span>
-                <img src="img/маг.png" alt="" id="img-mage">
+                <span>Mage</span>
+                <img src="img/img-mage.jpg" alt="" id="img-mage">
             </div>
             <div id="engineer" class="my-hero-card">
-                <span>Инженер</span>
-                <img src="img/инженер.png" alt="" id="img-engineer">
+                <span>Engineer</span>
+                <img src="img/img-engineer.jpg" alt="" id="img-engineer">
             </div>
         </div>
         <div id="save-my-stats">
             <button id="save"></button>
+        </div>
+    </div>
+    <div id="enemiesBook">
+        <div class="enemies-img-and-text"></div>
+        <div id="back-menu">
+            <button id="menu"></button>
         </div>
     </div>
     <script src="skript.js"></script>
