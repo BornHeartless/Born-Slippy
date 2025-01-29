@@ -1,6 +1,7 @@
 
 let hp = 100 //Let-команда для создания переменной, hp-название переменной,100-значение переменной
 let gold = 50
+console.log(gold)
 document.querySelector(".hp-text").innerText = hp
 document.querySelector(".gold-text").innerText = gold
 // получение доступа к html
@@ -81,8 +82,7 @@ function buyHp() {
             gold -= 10
         }
     }
-    document.querySelector(".hp-text").innerText = hp
-    document.querySelector(".gold-text").innerText = gold
+    updateHeroInfo()
 }
 // функция для выхода в меню из магазина
 function goBack() {//function-команда создания функции
@@ -244,10 +244,10 @@ function createShopgan() {
         if (localStorage.getItem("heroclass") === "archer") {
             if (shopganData[w].gun_class === "gun_archer") {
                 button.style.backgroundImage = `${shopganData[w].gun_image}`
-                button.id = `${shopganData[w].id}`
+                button.id = `${shopganData[w].gun_price}`
                 span1.textContent = `${shopganData[w].gun_name}`
-                span2.textContent = `${shopganData[w].gun_damage}`
-                span3.textContent = `${shopganData[w].gun_price}`
+                span2.textContent = `Dmg:${shopganData[w].gun_damage}`
+                span3.textContent = `Price:${shopganData[w].gun_price}`
                 div.appendChild(button)
                 div.appendChild(span1)
                 div.appendChild(span2)
@@ -258,9 +258,9 @@ function createShopgan() {
         if (localStorage.getItem("heroclass") === "warrior") {
             if (shopganData[w].gun_class === "gun_warrior") {
                 span1.textContent = `${shopganData[w].gun_name}`
-                span2.textContent = `${shopganData[w].gun_damage}`
-                span3.textContent = `${shopganData[w].gun_price}`
-                button.id = `${shopganData[w].id}`
+                span2.textContent = `Dmg:${shopganData[w].gun_damage}`
+                span3.textContent = `Price:${shopganData[w].gun_price}`
+                button.id = `${shopganData[w].gun_price}`
                 button.style.backgroundImage = `${shopganData[w].gun_image}`
                 div.appendChild(button)
                 div.appendChild(span1)
@@ -272,9 +272,9 @@ function createShopgan() {
         if (localStorage.getItem("heroclass") === "mage") {
             if (shopganData[w].gun_class === "gun_mage") {
                 span1.textContent = `${shopganData[w].gun_name}`
-                span2.textContent = `${shopganData[w].gun_damage}`
-                span3.textContent = `${shopganData[w].gun_price}`
-                button.id = `${shopganData[w].id}`
+                span2.textContent = `Dmg:${shopganData[w].gun_damage}`
+                span3.textContent = `Price:${shopganData[w].gun_price}`
+                button.id = `${shopganData[w].gun_price}`
                 button.style.backgroundImage = `${shopganData[w].gun_image}`
                 div.appendChild(button)
                 div.appendChild(span1)
@@ -286,9 +286,9 @@ function createShopgan() {
         if (localStorage.getItem("heroclass") === "engineer") {
             if (shopganData[w].gun_class === "gun_engineer") {
                 span1.textContent = `${shopganData[w].gun_name}`
-                span2.textContent = `${shopganData[w].gun_damage}`
-                span3.textContent = `${shopganData[w].gun_price}`
-                button.id = `${shopganData[w].id}`
+                span2.textContent = `Dmg:${shopganData[w].gun_damage}`
+                span3.textContent = `Price:${shopganData[w].gun_price}`
+                button.id = `${shopganData[w].gun_price}`
                 button.style.backgroundImage = `${shopganData[w].gun_image}`
                 div.appendChild(button)
                 div.appendChild(span1)
@@ -303,9 +303,19 @@ function closeGun() {
     shopGan.style.display = "none"
     button2.onclick = createShopgan
 }
-localStorage.clear()
+// localStorage.clear()
 function buyGun(e) {
     let gunImg = e.target.getAttribute("id")
-    localStorage.setItem("gold")
+    localStorage.setItem("gold",gold)
     console.log(gunImg)
+    if (+gunImg<=+gold) {
+        gold-=gunImg
+        updateHeroInfo()
+        localStorage.setItem("gold",gold)
+        console.log(localStorage.getItem("gold"))
+    }
+}
+function updateHeroInfo() {
+    document.querySelector(".hp-text").innerText = hp
+    document.querySelector(".gold-text").innerText = gold
 }
